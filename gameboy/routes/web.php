@@ -20,26 +20,26 @@ Route::get('/', [GameController::class, 'index']);
 // Menampilkan halaman dashboard.
 
 Route::get('/game/{id}', [GameController::class, 'detail']);
-// Menampilkan detail film berdasarkan ID.
+// Menampilkan detail game berdasarkan ID.
 
 // CRUD Movie
 Route::get('/games/data', [GameController::class, 'data'])->middleware('auth');
-// Memerlukan otentikasi untuk membaca data film.
+// Memerlukan otentikasi untuk membaca data game.
 
 Route::get('/games/create', [GameController::class, 'create'])->middleware('auth');
-// Memerlukan otentikasi untuk menampilkan halaman pembuatan film.
+// Memerlukan otentikasi untuk menampilkan halaman pembuatan game.
 
 Route::post('/game/store', [GameController::class, 'store'])->middleware('auth');
-// Memerlukan otentikasi untuk menyimpan data film baru.
+// Memerlukan otentikasi untuk menyimpan data game baru.
 
 Route::get('/game/{id}/edit', [GameController::class, 'edit'])->middleware('auth');
-// Memerlukan otentikasi untuk menampilkan halaman pengeditan film berdasarkan ID.
+// Memerlukan otentikasi untuk menampilkan halaman pengeditan game berdasarkan ID.
 
 Route::post('/game/{id}/edit', [GameController::class, 'update'])->middleware('auth');
-// Memerlukan otentikasi untuk menyimpan perubahan pada data film berdasarkan ID.
+// Memerlukan otentikasi untuk menyimpan perubahan pada data game berdasarkan ID.
 
 Route::get('/game/delete/{id}', [GameController::class, 'delete'])->middleware('auth');
-// Memerlukan otentikasi untuk menghapus data film berdasarkan ID.
+// Memerlukan otentikasi untuk menghapus data game berdasarkan ID.
 
 // Login
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');

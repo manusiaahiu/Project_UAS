@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 
+
+
 <body>
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #45526e">
         <div class="container">
@@ -166,8 +168,6 @@
         </div>
         <!-- Grid container -->
     </footer>
-
-    <!-- Footer -->
 
 
     <!-- End of .container -->

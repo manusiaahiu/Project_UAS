@@ -10,6 +10,7 @@
         </div>
     @endif
 
+
     <h1>Daftar Game</h1>
     <div class="row">
         @foreach ($games as $game)
@@ -32,8 +33,38 @@
         @endforeach
 
         <div class="d-flex justify-content-center">
-            {{ $games->links() }}
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    @if($games->onFirstPage())
+                        <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">
+                            <span class="page-link" aria-hidden="true">&laquo;</span>
+                        </li>
+                    @else
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $games->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')">&laquo;</a>
+                        </li>
+                    @endif
+
+                    @foreach ($games->getUrlRange(1, $games->lastPage()) as $page => $url)
+                        <li class="page-item {{ $page == $games->currentPage() ? 'active' : '' }}">
+                            <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                        </li>
+                    @endforeach
+
+                    @if ($games->hasMorePages())
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $games->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">&raquo;</a>
+                        </li>
+                    @else
+                        <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.next')">
+                            <span class="page-link" aria-hidden="true">&raquo;</span>
+                        </li>
+                    @endif
+                </ul>
+            </nav>
         </div>
+
+
 
 
     </div>

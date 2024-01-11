@@ -11,10 +11,13 @@
 
 
 
-<body>
+<body style="background: url('/images/bg.jpg') no-repeat center center fixed; background-size: cover;">
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #45526e">
         <div class="container">
-            <a class="navbar-brand" href="/"><i class="bi bi-dpad-fill"></i> GameBoy</a>
+            <a class="navbar-brand" href="/"></a><a class="navbar-brand" href="/">
+                <img src="{{ asset('/images/logo1.png') }}" class="img-fluid" style="max-height: 30px;">
+                GameBoy
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">

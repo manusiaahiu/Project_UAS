@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link href="/bootstrap/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body style="background: url('/images/bg.jpg') no-repeat center center fixed; background-size: cover;">
 
 <div class="container mt-5">
     <div class="row justify-content-center">

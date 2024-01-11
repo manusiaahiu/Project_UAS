@@ -11,7 +11,7 @@
     @endif
 
 
-    <h1>Daftar Game</h1>
+    <h1 style="color: white;">Daftar Game</h1>
     <div class="row">
         @foreach ($games as $game)
             <div class="col-lg-6">
